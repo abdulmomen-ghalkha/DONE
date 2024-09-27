@@ -135,5 +135,5 @@ dmypy.json
 **/*.gz
 
 data/**/*
-
-!data/**/*.py
+!data/*
+!data/*/*.py
