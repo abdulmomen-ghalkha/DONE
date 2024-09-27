@@ -134,6 +134,6 @@ dmypy.json
 **/*.json
 **/*.gz
 
-/data/**
+data/**/*
 
 !data/**/*.py
