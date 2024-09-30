@@ -137,3 +137,5 @@ dmypy.json
 data/**/*
 !data/*
 !data/*/*.py
+/DONE_env
+/.vs
