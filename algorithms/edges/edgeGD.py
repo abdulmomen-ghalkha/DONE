@@ -22,8 +22,8 @@ class edgeGD(Edgebase):
     def train(self, epochs, glob_iter):
         self.model.train()
         # Only update once time
-        for i, (X, y) in zip(range(1), self.trainloaderfull):
-            X, y = X.to(self.device), y.to(self.device)
+        for i, (X, y) in zip(range(1), self.trainloader):
+            X, y = X.to(self.device).to(torch), y.to(self.device)
             self.model.train()
             #loss_per_epoch = 0
             # Sample a mini-batch (D_i)

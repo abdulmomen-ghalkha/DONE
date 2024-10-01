@@ -302,13 +302,13 @@ class CharLSTM(nn.Module):
 
 
 
-def Sent():
+def Sent140(num_classes=2, n_hidden=100, num_embeddings=101, embedding_dim=100, max_seq_len=25, dropout_rate=0.1):
     model = CharLSTM(
-    num_classes=2,
-    n_hidden=100,
-    num_embeddings=101,
-    embedding_dim=100,
-    max_seq_len=25,
-    dropout_rate=0.1,
+    num_classes=num_classes,
+    n_hidden=n_hidden,
+    num_embeddings=num_embeddings,
+    embedding_dim=embedding_dim,
+    max_seq_len=max_seq_len,
+    dropout_rate=dropout_rate,
 )
     return model

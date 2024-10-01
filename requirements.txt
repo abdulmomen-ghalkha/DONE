@@ -6,3 +6,4 @@ torchvision
 matplotlib
 tqdm
 scikit-learn
+comet-ml

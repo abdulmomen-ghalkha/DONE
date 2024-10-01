@@ -201,7 +201,7 @@ def plot_summary_linear(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[], le
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax1.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$B = $' + stringbatch ,marker = markers[i],markevery=0.2, markersize=5)
 
     #fig.hlines(y=0.035,xmin=0, xmax=200, linestyle='--',label = "optimal solution", color= "m" )
@@ -213,7 +213,7 @@ def plot_summary_linear(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[], le
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax2.plot(train_loss[i+num_al, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$B = $' + stringbatch ,marker = markers[i],markevery=0.2, markersize=5)
 
     ax2.set_ylim([0.045, 0.2])
@@ -248,7 +248,7 @@ def plot_summary_mnist(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[], lea
     for i in range(Numb_Algs):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         plt.plot(train_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$B = $' + stringbatch ,marker = markers[i],markevery=0.2, markersize=5)
         #plt.plot(train_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + "_"+str(loc_ep1[i])+"e" + "_" + str(batch_size[i]) + "b"  + "_" + str(learning_rate[i])  + "_" + str(alpha[i])  + "_" + str(eta[i]) )
     plt.legend(loc='lower right')
@@ -265,7 +265,7 @@ def plot_summary_mnist(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[], lea
     for i in range(Numb_Algs):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         plt.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$B = $' + stringbatch ,marker = markers[i],markevery=0.2, markersize=5)
         #plt.plot(train_loss[i, start:], linestyle=linestyles[i], label=algs_lbl[i] + "_"+str(loc_ep1[i])+"e" + "_" + str(batch_size[i]) + "b" + "_" + str(learning_rate[i])  + "_" + str(alpha[i])  + "_" + str(eta[i]))
         #plt.plot(train_loss1[i, 1:], label=algs_lbl1[i])
@@ -286,7 +286,7 @@ def plot_summary_mnist(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[], lea
         #plt.plot(glob_acc1[i, 1:], label=algs_lbl1[i])
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         plt.plot(glob_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$B = $' + stringbatch ,marker = markers[i],markevery=0.2, markersize=5)
        
     plt.legend(loc='lower right')
@@ -332,10 +332,10 @@ def plot_summary_mnist2(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[], le
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0' and algs_lbl[i] != "DANE"):
-            stringbatch = '$\infty$' + ", " + \
+            stringbatch = r'$\infty$' + ", " + \
                 '$\\alpha$' + " = " + str(alpha[i])
         elif(stringbatch == '0'):
-             stringbatch = '$\infty$'
+             stringbatch = r'$\infty$'
         
         ax1.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$B = $' + stringbatch, marker = markers[i],markevery=0.2, markersize=7)
 
@@ -348,10 +348,10 @@ def plot_summary_mnist2(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[], le
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0' and algs_lbl[i] != "DANE"):
-            stringbatch = '$\infty$' + ", " + \
+            stringbatch = r'$\infty$' + ", " + \
                 '$\\alpha$' + " = " + str(alpha[i])
         elif(stringbatch == '0'):
-             stringbatch = '$\infty$'
+             stringbatch = r'$\infty$'
 
         ax2.plot(glob_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": " + '$B = $' +
                  stringbatch , marker=markers[i], markevery=0.2, markersize=7)
@@ -493,7 +493,7 @@ def plot_summary_linear2(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[], l
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax1.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": " +
                  '$B = $' + stringbatch, marker=markers[i], markevery=0.2 + i/10, markersize=7)
 
@@ -506,7 +506,7 @@ def plot_summary_linear2(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[], l
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax2.plot(glob_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": " + '$B = $' + stringbatch, marker=markers[i], markevery=0.2 + i/10, markersize=7)
 
     ax2.set_ylim([0.049, 0.1])
@@ -552,7 +552,7 @@ def plot_summary_linear_edge(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax1.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": " +'$S = $' + str(num_users[i]), marker=markers[i], markevery=0.2 + i/10, markersize=7)
 
     #fig.hlines(y=0.035,xmin=0, xmax=200, linestyle='--',label = "optimal solution", color= "m" )
@@ -564,7 +564,7 @@ def plot_summary_linear_edge(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax2.plot(glob_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": " + '$S = $' + str(num_users[i]), marker=markers[i], markevery=0.2 + i/10, markersize=7)
 
     ax2.set_ylim([0.049, 0.1])
@@ -904,7 +904,7 @@ def plot_summary_mnist_edge(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[]
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax1.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$S = $' + str(num_users[i]) ,marker = markers[i],markevery=0.2, markersize=7)
     ax1.legend(loc='upper right')
     ax1.set_ylim([0.21, 0.52])
@@ -914,7 +914,7 @@ def plot_summary_mnist_edge(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[]
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax2.plot(glob_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$S = $' + str(num_users[i]) ,marker = markers[i],markevery=0.2, markersize=7)
 
     ax2.set_ylim([0.86, 0.922])
@@ -956,7 +956,7 @@ def plot_summary_human_edge(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[]
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax1.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$S = $' + str(num_users[i]) ,marker = markers[i],markevery=0.2, markersize=7)
     ax1.legend(loc='upper right')
     ax1.set_ylim([0.1, 0.6])
@@ -966,7 +966,7 @@ def plot_summary_human_edge(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[]
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax2.plot(glob_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$S = $' + str(num_users[i]) ,marker = markers[i],markevery=0.2, markersize=7)
 
     ax2.set_ylim([0.86, 0.97])
@@ -1008,7 +1008,7 @@ def plot_summary_nist_edge(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[],
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax1.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$S = $' + str(num_users[i]) ,marker = markers[i],markevery=0.2, markersize=7)
     ax1.legend(loc='upper right')
     ax1.set_ylim([0.62, 2])
@@ -1018,7 +1018,7 @@ def plot_summary_nist_edge(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[],
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax2.plot(glob_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$S = $' + str(num_users[i]) ,marker = markers[i],markevery=0.2, markersize=7)
 
     ax2.set_ylim([0.5, 0.81])
@@ -1160,7 +1160,7 @@ def plot_summary_nist_batch(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[]
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax1.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+ '$B = $' + str(stringbatch) + ', $R = $' + str(loc_ep1[i]) + ', $\\alpha = $' + str(alpha[i]),marker = markers[i],markevery=0.2, markersize=7)
     ax1.legend(loc='upper right')
     ax1.set_ylim([0.62,2])
@@ -1169,7 +1169,7 @@ def plot_summary_nist_batch(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[]
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax2.plot(glob_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$B = $' + str(stringbatch) + ', $R = $' + str(loc_ep1[i]) + ', $\\alpha = $' + str(alpha[i]),marker = markers[i],markevery=0.2, markersize=7)
 
     ax2.set_ylim([0.5, 0.81])
@@ -1207,7 +1207,7 @@ def plot_summary_mnist_batch(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax1.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+ '$B = $' + str(stringbatch) + ', $R = $' + str(loc_ep1[i]) + ', $\\alpha = $' + str(alpha[i]),marker = markers[i],markevery=0.2, markersize=7)
     ax1.legend(loc='upper right')
     ax1.set_ylim([0.21, 0.52])
@@ -1216,7 +1216,7 @@ def plot_summary_mnist_batch(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax2.plot(glob_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$B = $' + str(stringbatch) + ', $R = $' + str(loc_ep1[i]) + ', $\\alpha = $' + str(alpha[i]),marker = markers[i],markevery=0.2, markersize=7)
 
     ax2.set_ylim([0.86, 0.922])
@@ -1254,7 +1254,7 @@ def plot_summary_human_batch(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax1.plot(train_loss[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+ '$B = $' + str(stringbatch) + ', $R = $' + str(loc_ep1[i]) + ', $\\alpha = $' + str(alpha[i]),marker = markers[i],markevery=0.2, markersize=7)
     ax1.legend(loc='upper right')
     ax1.set_ylim([0.1,0.6])
@@ -1263,7 +1263,7 @@ def plot_summary_human_batch(num_users=[], loc_ep1=5, Numb_Glob_Iters=10, lamb=[
     for i in range(num_al):
         stringbatch = str(batch_size[i])
         if(stringbatch == '0'):
-            stringbatch = '$\infty$'
+            stringbatch = r'$\infty$'
         ax2.plot(glob_acc[i, 1:], linestyle=linestyles[i], label=algs_lbl[i] + ": "+  '$B = $' + str(stringbatch) + ', $R = $' + str(loc_ep1[i]) + ', $\\alpha = $' + str(alpha[i]),marker = markers[i],markevery=0.2, markersize=7)
 
     ax2.set_ylim([0.86, 0.97])
